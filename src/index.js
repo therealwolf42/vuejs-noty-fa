@@ -50,8 +50,8 @@ const VueNoty = {
     return this.show(text, 'info', opts)
   },
 
-  closeAll (){
-    return Noty.closeAll();
+  closeAll (queueName){
+    return Noty.closeAll(queueName);
   }
 
 };
