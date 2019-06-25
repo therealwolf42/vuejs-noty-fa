@@ -1,6 +1,6 @@
 {
-  "name": "vuejs-noty",
-  "version": "0.1.3",
+  "name": "vuejs-noty-2",
+  "version": "0.1.4",
   "description": "Noty plugin for Vue.js 2",
   "main": "./dist/vuejs-noty.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/renoguyon/vuejs-noty.git"
+    "url": "git+https://github.com/dunhamjared/vuejs-noty.git"
   },
   "keywords": [
     "vuejs",
@@ -19,12 +19,12 @@
     "notifications",
     "toast"
   ],
-  "author": "Reno Guyon <reno.guyon@gmail.com>",
+  "author": "Jared Dunham <dunhamjared130@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/renoguyon/vuejs-noty/issues"
+    "url": "https://github.com/dunhamjared/vuejs-noty/issues"
   },
-  "homepage": "https://github.com/renoguyon/vuejs-noty#readme",
+  "homepage": "https://github.com/dunhamjared/vuejs-noty#readme",
   "devDependencies": {
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",

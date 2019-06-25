@@ -7,7 +7,7 @@ A Vue JS wrapper around [Noty](http://ned.im/noty/). Developped for Vue 2.
 Install using npm:
 
 ```bash
-$ npm install vuejs-noty
+$ npm install vuejs-noty-2
 ```
 
 Import and register Vue plugin:
