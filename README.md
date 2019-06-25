@@ -1,4 +1,4 @@
-# vuejs-noty
+# vuejs-noty-2
 A Vue JS wrapper around [Noty](http://ned.im/noty/). Developped for Vue 2.
 
 ## Getting Started
