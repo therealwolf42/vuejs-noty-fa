@@ -48,7 +48,12 @@ const VueNoty = {
 
   info (text, opts = {}) {
     return this.show(text, 'info', opts)
+  },
+
+  closeAll (){
+    return Noty.closeAll();
   }
+
 };
 
 export default {
