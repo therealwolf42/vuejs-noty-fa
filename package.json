@@ -1,7 +1,7 @@
 {
-  "name": "vuejs-noty-2",
-  "version": "0.1.5",
-  "description": "Noty plugin for Vue.js 2",
+  "name": "vuejs-noty-fa",
+  "version": "0.1.6",
+  "description": "Noty plugin for Vue.js 2 (incl. FontAwesome Support",
   "main": "./dist/vuejs-noty.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --hot --config ./build/webpack.dev.conf.js --content-base dev/ --port 8080",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dunhamjared/vuejs-noty.git"
+    "url": "git+https://github.com/therealwolf42/vuejs-noty-fa.git"
   },
   "keywords": [
     "vuejs",
@@ -19,12 +19,12 @@
     "notifications",
     "toast"
   ],
-  "author": "Jared Dunham <dunhamjared130@gmail.com>",
+  "author": "therealwolf42",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dunhamjared/vuejs-noty/issues"
+    "url": "https://github.com/therealwolf42/vuejs-noty-fa/issues"
   },
-  "homepage": "https://github.com/dunhamjared/vuejs-noty#readme",
+  "homepage": "https://github.com/therealwolf42/vuejs-noty-fa#readme",
   "devDependencies": {
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
@@ -54,6 +54,6 @@
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
-    "noty": "^3.1.0"
+    "noty": "^3.1.4"
   }
 }

@@ -1,6 +1,8 @@
 # vuejs-noty-2
 A Vue JS wrapper around [Noty](http://ned.im/noty/). Developped for Vue 2.
 
+Forked to add [FontAwesome](https://fontawesome.com/icons) support.
+
 ## Getting Started
 
 
@@ -82,7 +84,7 @@ this.$noty.info("Hey! Something very important here...", {
   killer: true,
   timeout: 6000,
   layout: 'topRight'
-})
+}, ['fal', 'times-circle']) // fal is a FontAwesome Pro icon
 ```
 
 For more information about available configuration properties, please read [Noty's documentation](https://ned.im/noty/#/options).

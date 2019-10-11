@@ -1,10 +1,12 @@
 import Noty from 'noty'
+import Vue from 'vue'
+
 import './styles.less'
 
 const defaults = {
   layout: 'topRight',
   theme: 'mint',
-  timeout: 5000,
+  timeout: 2500,
   progressBar: true,
   closeWith: ['click'],
 };
@@ -21,33 +23,33 @@ const VueNoty = {
     return new Noty(params)
   },
 
-  show (text, type = 'alert', opts = {}) {
-
+  // icon example: ['fal', 'check-circle']
+  show (text, type = 'alert', opts = {}, icon = []) {
+    const iconFormatted = icon.length > 0 ? `<i class="${icon[0]} fa-${icon[1]}" style="margin-right:5px;"></i> ` : ''
     const params = Object.assign({}, this.options, opts, {
       type,
-      text
+      text: `${iconFormatted}${text}`
     });
 
     const noty = this.create(params);
     noty.show();
     return noty;
-
   },
 
-  success (text, opts = {}) {
-    return this.show(text, 'success', opts)
+  success (text, opts = {}, icon = ['fal', 'check-circle']) {
+    return this.show(text, 'success', opts, icon)
   },
 
-  error (text, opts = {}) {
-    return this.show(text, 'error', opts)
+  error (text, opts = {}, icon = ['fal', 'times-circle']) {
+    return this.show(text, 'error', opts, icon)
   },
 
-  warning (text, opts = {}) {
-    return this.show(text, 'warning', opts)
+  warning (text, opts = {}, icon = ['fal', 'exclamation-circle']) {
+    return this.show(text, 'warning', opts, icon)
   },
 
-  info (text, opts = {}) {
-    return this.show(text, 'info', opts)
+  info (text, opts = {}, icon = ['fal', 'info-circle']) {
+    return this.show(text, 'info', opts, icon)
   },
 
   closeAll (queueName){
