@@ -101,7 +101,11 @@ You can set a default configuration object when registering the plugin. Example:
 Vue.use(VueNoty, {
   timeout: 4000,
   progressBar: true,
-  layout: 'topCenter'
+  layout: 'topCenter',
+  icon: {
+    success: [], // no icon
+    error: ['fal', 'times-circle'] // using different icon weight
+  }
 })
 ```
 

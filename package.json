@@ -1,6 +1,6 @@
 {
   "name": "vuejs-noty-fa",
-  "version": "0.1.7",
+  "version": "0.1.11",
   "description": "Noty plugin for Vue.js 2 (incl. FontAwesome Support)",
   "main": "./dist/vuejs-noty-fa.js",
   "scripts": {

@@ -9,13 +9,23 @@ const defaults = {
   timeout: 2500,
   progressBar: true,
   closeWith: ['click'],
+  icon: {
+    success: ['fas', 'check-circle'],
+    error: ['fas', 'times-circle'],
+    warning: ['fas', 'exclamation-circle'],
+    info: ['fas', 'info-circle']
+  }
 };
 
 const VueNoty = {
   options: {},
 
   setOptions (opts) {
+    if(opts.icon)
+      this.options.icon = Object.assign({}, this.options.icon, opts.icon)
+    
     this.options = Object.assign({}, defaults, opts);
+
     return this
   },
 
@@ -25,7 +35,21 @@ const VueNoty = {
 
   // icon example: ['fal', 'check-circle']
   show (text, type = 'alert', opts = {}, icon = []) {
-    const iconFormatted = icon.length > 0 ? `<i class="${icon[0]} fa-${icon[1]}" style="margin-right:5px;"></i> ` : ''
+    let usedIcon = []
+    if(icon.length > 0) {
+      usedIcon = icon
+    } else if(opts.icon && opts.icon[type] && opts.icon[type].length > 0) {
+      usedIcon = opts.icon[type]
+    } else if(this.options.icon && this.options.icon[type] && this.options.icon[type].length > 0) {
+      usedIcon = this.options.icon[type]
+    }
+    
+    const iconFormatted = usedIcon && usedIcon.length > 0
+      ? `<i class="${usedIcon[0]} fa-${usedIcon[1]} noty_icon"></i> `
+      : ''
+    
+    delete opts.icon // remove to prevent errors
+
     const params = Object.assign({}, this.options, opts, {
       type,
       text: `${iconFormatted}${text}`
@@ -36,19 +60,19 @@ const VueNoty = {
     return noty;
   },
 
-  success (text, opts = {}, icon = ['fal', 'check-circle']) {
+  success (text, opts = {}, icon = []) {
     return this.show(text, 'success', opts, icon)
   },
 
-  error (text, opts = {}, icon = ['fal', 'times-circle']) {
+  error (text, opts = {}, icon = []) {
     return this.show(text, 'error', opts, icon)
   },
 
-  warning (text, opts = {}, icon = ['fal', 'exclamation-circle']) {
+  warning (text, opts = {}, icon = []) {
     return this.show(text, 'warning', opts, icon)
   },
 
-  info (text, opts = {}, icon = ['fal', 'info-circle']) {
+  info (text, opts = {}, icon = []) {
     return this.show(text, 'info', opts, icon)
   },
 
