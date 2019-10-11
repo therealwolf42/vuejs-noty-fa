@@ -8,8 +8,8 @@ module.exports = merge(baseConf, {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: 'vuejs-noty.js',
-    library: ['vuejs-noty'],
+    filename: 'vuejs-noty-fa.js',
+    library: ['vuejs-noty-fa'],
     libraryTarget: 'umd'
   },
   devtool: false,
@@ -35,6 +35,6 @@ module.exports = merge(baseConf, {
         warnings: false
       }
     }),
-    new ExtractTextPlugin('vuejs-noty.css'),
+    new ExtractTextPlugin('vuejs-noty-fa.css'),
   ]
 })

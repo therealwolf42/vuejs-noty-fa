@@ -1,5 +1,5 @@
-# vuejs-noty-2
-A Vue JS wrapper around [Noty](http://ned.im/noty/). Developped for Vue 2.
+# Noty for VueJs (incl. FontAwesome Support)
+A VueJS 2 wrapper around [Noty](http://ned.im/noty/).
 
 Forked to add [FontAwesome](https://fontawesome.com/icons) support.
 
@@ -9,30 +9,60 @@ Forked to add [FontAwesome](https://fontawesome.com/icons) support.
 Install using npm:
 
 ```bash
-$ npm install vuejs-noty-2
+$ npm install vuejs-noty-fa
 ```
 
 Import and register Vue plugin:
 
 ```js
 import Vue from 'vue'
-import VueNoty from 'vuejs-noty'
+import VueNoty from 'vuejs-noty-fa'
 
 Vue.use(VueNoty)
 ```
+
+For use with Nuxt, create a new plugin:
+
+```js
+
+// /plugins/noty.js
+import Vue from 'vue'
+import VueNoty from 'vuejs-noty-fa'
+
+export default () => {
+  Vue.use(VueNoty)
+}
+```
+
+.. and add it to `nuxt.config.js`
+
+```js
+plugins: [
+  {src: '@/plugins/noty', ssr: false}
+]
+```
+
 
 #### Import noty styles
 
 Import stylesheet in your vue / js components:
 
 ```js
-import 'vuejs-noty/dist/vuejs-noty.css'
+import 'vuejs-noty-fa/dist/vuejs-noty-fa.css'
 ```
 
 Or, import styles in your less / scss stylesheet:
 
 ```less
-@import '~vuejs-noty/dist/vuejs-noty.css';
+@import '~vuejs-noty-fa/dist/vuejs-noty-fa.css';
+```
+
+Or, import styles for Nuxt inside `nuxt.config.js`:
+
+```js
+css: [
+  'vuejs-noty-fa/dist/vuejs-noty-fa.css',
+]
 ```
 
 ## Usage

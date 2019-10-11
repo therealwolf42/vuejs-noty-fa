@@ -1,8 +1,8 @@
 {
   "name": "vuejs-noty-fa",
-  "version": "0.1.6",
-  "description": "Noty plugin for Vue.js 2 (incl. FontAwesome Support",
-  "main": "./dist/vuejs-noty.js",
+  "version": "0.1.7",
+  "description": "Noty plugin for Vue.js 2 (incl. FontAwesome Support)",
+  "main": "./dist/vuejs-noty-fa.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --hot --config ./build/webpack.dev.conf.js --content-base dev/ --port 8080",
     "build": "rimraf dist && cross-env NODE_ENV=production webpack --progress --hide-modules --config ./build/webpack.prod.conf.js",
